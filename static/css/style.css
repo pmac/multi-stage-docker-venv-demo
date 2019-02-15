@@ -1,0 +1,15 @@
+/**
+ * Styles stolen from snippets service home page:
+ *   https://github.com/mozmeao/snippets-service/blob/master/snippets/base/templates/base/home.jinja
+ * Thanks once again to Giorgos!
+ */
+body {
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+    font-family: "Arial";
+    text-align: center;
+    margin: 100px;
+    color: WhiteSmoke;
+}
+#heart {
+    color: Orange;
+}
