@@ -1,8 +1,25 @@
 version: '3'
 services:
+  # app using multi-stage and requirements.txt
   app:
     build:
       context: .
-      dockerfile: ${USE_DOCKERFILE:-Dockerfile}
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+
+  # app using multi-stage and pipenv
+  app-pipenv:
+    build:
+      context: .
+      dockerfile: Dockerfile-pipenv
+    ports:
+      - "8000:8000"
+
+  # app using single-stage
+  app-full:
+    build:
+      context: .
+      dockerfile: Dockerfile-full
     ports:
       - "8000:8000"
